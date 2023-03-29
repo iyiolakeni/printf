@@ -29,17 +29,16 @@ int stringUppercase(va_list arg)
 {
 	char *str1;
 	int i, count = 0;
-	char m = '\\';
-	char n = 'x';
-	char l = '0';
-	char o = 'A';
 
 	str1 = va_arg(arg, char *);
 	for (i = 0; str1[i] != '\0'; i++)
 	{
 		if ((str1[i] > 0 && str1[i] < 32) || str1[i] >= 127)
 		{
-			write(1, &m, 1) + write(1, &n, 1) + write(1, &l, 1) + write(1, &o, 1);
+			_putchar('\\');
+			_putchar('x');
+			_putchar('0');
+			_putchar('A');
 			count += 4;
 		}
 		else
