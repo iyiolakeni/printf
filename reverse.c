@@ -31,6 +31,9 @@ int stringUppercase(va_list arg)
 	int i, count = 0;
 
 	str1 = va_arg(arg, char *);
+	if (strl1 == NULL)
+		return (NULL);
+
 	for (i = 0; str1[i] != '\0'; i++)
 	{
 		if ((str1[i] > 0 && str1[i] < 32) || str1[i] >= 127)
