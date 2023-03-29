@@ -12,7 +12,7 @@ int unsigned_int(va_list arg)
 	number = va_arg(arg, unsigned int);
 	if (number == 0)
 	{
-		write(1, &number + '0', 1);
+		_putchar(number + '0');
 		count++;
 	}
 	else if (number > UINT_MAX)
