@@ -39,10 +39,7 @@ int stringUppercase(va_list arg)
 	{
 		if ((str1[i] > 0 && str1[i] < 32) || str1[i] >= 127)
 		{
-			write(1, &m, 1);
-			write(1, &n, 1);
-			write(1, &l, 1);
-			write(1, &o, 1);
+			write(1, &m, 1) + write(1, &n, 1) + write(1, &l, 1) + write(1, &o, 1);
 			count += 4;
 		}
 		else
